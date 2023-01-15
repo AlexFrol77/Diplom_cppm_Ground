@@ -27,16 +27,19 @@ public:
 	void Print_All_Hero();
 	void Set_Hero();
 	void Print_Select_Hero_Name(Transport* ref);
-	void Print_Replay_Hero_Name(Transport* ref);
+	void Print_Replay_Hero_Name(std::vector <Transport*> ref);
 	void Print_Registr_Hero_Name(std::vector <Transport*> ref);
 	int Get_Hero();
+
+	bool Check_Go_Race_Or_Registr();
 
 private:
 	
 	int	select_Race_,
 		select_Distance_,
 		select_Action_,
-		select_Hero_;
+		select_Hero_,
+		select_Registr_Or_Race_;
 
 	bool flag;
 

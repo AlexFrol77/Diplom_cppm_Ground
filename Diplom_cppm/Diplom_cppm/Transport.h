@@ -14,12 +14,15 @@ public:
 	int Get_Distance();
 	int Get_Speed();
 	int Get_Result();
+
+	virtual int Get_ID();
 	
 	virtual std::string Get_Name();
 
 private:
 	int distance_,
 		speed_ = 0,
-		result_ = 10;
+		result_ = 10,
+		id_ = 0;
 	std::string name_ = "Транспорт";
 };

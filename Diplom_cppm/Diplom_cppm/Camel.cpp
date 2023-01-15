@@ -13,3 +13,6 @@ void Camel::Print_Transport_Name() {
 std::string Camel::Get_Name() {
 	return name_;
 }
+int Camel::Get_ID() {
+	return id_;
+}

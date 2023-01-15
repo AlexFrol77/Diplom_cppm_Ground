@@ -26,3 +26,6 @@ int Transport::Get_Result() {
 std::string Transport::Get_Name() {
 	return name_;
 }
+int Transport::Get_ID() {
+	return id_;
+}

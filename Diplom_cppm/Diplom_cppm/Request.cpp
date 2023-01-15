@@ -103,9 +103,13 @@ void Request::Print_Select_Hero_Name(Transport* ref) {
 	std::cout << " успешно зарегистрирован!" << std::endl;
 }
 
-void Request::Print_Replay_Hero_Name(Transport* ref) {
-	ref->Print_Transport_Name();
-	std::cout << " уже зарегистрирован!" << std::endl;
+void Request::Print_Replay_Hero_Name(std::vector <Transport*> ref) {
+	for (auto i: ref)
+		if (i->Get_ID() == select_Hero_) {
+			i->Print_Transport_Name();
+			std::cout << " уже зарегистрирован!" << std::endl;
+			break;
+		}
 }
 
 void Request::Print_Registr_Hero_Name(std::vector <Transport*> ref) {
@@ -120,3 +124,25 @@ int Request::Get_Hero() {
 	return select_Hero_;
 }
 
+bool Request::Check_Go_Race_Or_Registr() {
+	std::cout << "1. Регистрация транспортного средства." << std::endl;
+	std::cout << "2. Начать гонку." << std::endl;
+	std::cout << "Выбирете действие:";
+	std::cin >> select_Registr_Or_Race_;
+	while (select_Registr_Or_Race_ < 1 || select_Registr_Or_Race_ > 2) {
+		system("cls");
+		std::cout << "Не верное значение!";
+		Sleep(1000);
+		system("cls");
+		std::cout << "1. Регистрация транспортного средства." << std::endl;
+		std::cout << "2. Начать гонку." << std::endl;
+		std::cout << "Выбирете действие:";
+		std::cin >> select_Registr_Or_Race_;
+	}
+	if (select_Registr_Or_Race_ == 1) {
+		return false;
+	}
+	else {
+		return true;
+	}
+}

@@ -1,12 +1,11 @@
 #pragma once
-#include"Request.h"
 #include"Transport.h"
-//#include"Camel.h"
+#include"Request.h"
 
-class Kentavr : public Transport {
+class Broomstick : public Transport {
 public:
-	Kentavr();
-	~Kentavr();
+	Broomstick();
+	~Broomstick();
 
 	void Print_Transport_Race() override;
 	void Print_Transport_Name() override;
@@ -15,8 +14,8 @@ public:
 
 	int Get_ID() override;
 private:
-	std::string name_ = " Кентавр ";
+	std::string name_ = " Метла";
 	int speed_ = 100;
 	int result_ = 50;
-	int id_ = 3;
+	int id_ = 7;
 };

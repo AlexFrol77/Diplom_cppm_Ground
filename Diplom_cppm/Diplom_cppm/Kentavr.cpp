@@ -12,3 +12,6 @@ void Kentavr::Print_Transport_Name() {
 std::string Kentavr::Get_Name() {
 	return name_;
 }
+int Kentavr::Get_ID() {
+	return id_;
+}

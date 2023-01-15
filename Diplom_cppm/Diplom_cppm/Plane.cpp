@@ -14,3 +14,6 @@ void Plane::Print_Transport_Name() {
 std::string Plane::Get_Name() {
 	return name_;
 }
+int Plane::Get_ID() {
+	return id_;
+}

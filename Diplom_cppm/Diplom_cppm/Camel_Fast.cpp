@@ -9,3 +9,6 @@ void Camel_Fast::Print_Transport_Race() {
 void Camel_Fast::Print_Transport_Name() {
 	std::cout << name_;
 }
+int Camel_Fast::Get_ID() {
+	return id_;
+}

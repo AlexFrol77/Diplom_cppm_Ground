@@ -11,8 +11,11 @@ public:
 
 	void Print_Transport_Race() override;
 	void Print_Transport_Name() override;
+
+	int Get_ID() override;
 private:
 	std::string name_ = " Верблюд - скороход";
 	int speed_ = 1000;
 	int result_ = 500;
+	int id_ = 2;
 };

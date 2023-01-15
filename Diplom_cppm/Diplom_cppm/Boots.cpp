@@ -13,3 +13,6 @@ void Boots::Print_Transport_Name() {
 std::string Boots::Get_Name() {
 	return name_;
 }
+int Boots::Get_ID() {
+	return id_;
+}
