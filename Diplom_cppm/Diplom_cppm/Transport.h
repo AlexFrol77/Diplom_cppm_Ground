@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
 
+
 class Transport {
 public:
 	Transport();
@@ -15,11 +16,10 @@ public:
 	virtual int Get_Result();
 	virtual int Get_ID();
 	virtual std::string Get_Name();
-	virtual bool operator<(Transport* r_op);
-	virtual bool operator>(Transport* r_op);
+	virtual void Go_Race(int dest);
 private:
 	int distance_,
-		speed_ = 0,
+		speed_ = 1,
 		result_ = 0,
 		id_ = 0;
 	std::string name_ = "Транспорт";

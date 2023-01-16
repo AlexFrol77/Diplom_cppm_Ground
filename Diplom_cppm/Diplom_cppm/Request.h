@@ -5,10 +5,7 @@
 #include<vector>
 #include<algorithm>
 #include"Transport.h"
-#include"Camel.h"
-#include"Camel_Fast.h"
-#include"Kentavr.h"
-#include"Boots.h"
+
 
 class Request {
 public:
@@ -32,6 +29,9 @@ public:
 	int Get_Hero();
 
 	bool Check_Go_Race_Or_Registr();
+
+	void Check_Result_Race(std::vector <Transport*> ref, int dest);
+	void Print_Result_Race(std::vector <Transport*> ref);
 
 private:
 	

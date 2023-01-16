@@ -20,19 +20,6 @@ int Plane::Get_ID() {
 int Plane::Get_Result() {
 	return result_;
 }
-bool Plane::operator<(Transport* r_op) {
-	if (this->result_ < r_op->Get_Result()) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-bool Plane::operator>(Transport* r_op) {
-	if (this->result_ > r_op->Get_Result()) {
-		return true;
-	}
-	else {
-		return false;
-	}
+void Plane::Go_Race(int dest) {
+	this->result_ = dest / speed_;
 }

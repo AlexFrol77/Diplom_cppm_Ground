@@ -109,11 +109,9 @@ int main(int argc, char** argv) {
 							request.Print_Select_Hero_Name(&broomstick);
 							vecTempSelectHero.push_back(request.Get_Hero());
 							break;
-						if (request.Get_Race() == 2 || request.Get_Race() == 3) {
-							default:
-								std::cout << "В этой гонке нет такого участника" << std::endl;
-								break;
-							}
+						default:
+							std::cout << "В этой гонке нет такого участника" << std::endl;
+							break;
 						}
 					}
 				}
@@ -142,6 +140,21 @@ int main(int argc, char** argv) {
 	} while (!flag);
 
 	request.Print_Registr_Hero_Name(vecHeroRace);
+	std::cout << std::endl;
+	request.Check_Result_Race(vecHeroRace, request.Get_Distance());
+
+	Transport* tempTransport;
+	for (int i = 1; i != vecHeroRace.size(); i++) {
+		if (vecHeroRace[i - 1]->Get_Result() > vecHeroRace[i]->Get_Result()) {
+			tempTransport = vecHeroRace[i - 1];
+			vecHeroRace[i - 1] = vecHeroRace[i];
+			vecHeroRace[i] = tempTransport;
+		}
+	}
+
+	system("cls");
+	request.Print_Result_Race(vecHeroRace);
+	system("pause");
 
 	return 0;
 };

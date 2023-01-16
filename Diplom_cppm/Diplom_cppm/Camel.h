@@ -12,8 +12,7 @@ public:
 	std::string Get_Name() override;
 	int Get_ID() override;
 	int Get_Result() override;
-	bool operator<(Transport* r_op) override;
-	bool operator>(Transport* r_op) override;
+	void Go_Race(int dest) override;
 private:
 	std::string name_ = " Верблюд";
 	int speed_ = 10;

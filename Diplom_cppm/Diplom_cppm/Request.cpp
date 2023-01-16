@@ -146,3 +146,16 @@ bool Request::Check_Go_Race_Or_Registr() {
 		return true;
 	}
 }
+void Request::Check_Result_Race(std::vector <Transport*> ref, int dest) {
+	for (int i = 0; i != ref.size(); i++) {
+		ref[i]->Go_Race(dest);
+	}
+}
+void Request::Print_Result_Race(std::vector <Transport*> ref) {
+	std::cout << "Результат гонки: ";
+	std::cout << std::endl;
+	std::cout << std::endl;
+	for (int i = 0; i != ref.size(); i++) {
+		std::cout << i + 1 << "." << " " << ref[i]->Get_Name() << "\t" << "Время: " << ref[i]->Get_Result() << std::endl;
+	}
+}

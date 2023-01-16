@@ -19,19 +19,6 @@ int Camel::Get_ID() {
 int Camel::Get_Result() {
 	return result_;
 }
-bool Camel::operator<(Transport* r_op) {
-	if (this->result_ < r_op->Get_Result()) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-bool Camel::operator>(Transport* r_op) {
-	if (this->result_ > r_op->Get_Result()) {
-		return true;
-	}
-	else {
-		return false;
-	}
+void Camel::Go_Race(int dest) {
+	this->result_ = dest / speed_;
 }
