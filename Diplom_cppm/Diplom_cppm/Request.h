@@ -33,6 +33,8 @@ public:
 	void Check_Result_Race(std::vector <Transport*> ref, int dest);
 	void Print_Result_Race(std::vector <Transport*> ref);
 
+	bool Check_Replay_Or_Exit();
+
 private:
 	
 	int	select_Race_,

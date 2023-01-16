@@ -113,7 +113,7 @@ void Request::Print_Replay_Hero_Name(std::vector <Transport*> ref) {
 }
 
 void Request::Print_Registr_Hero_Name(std::vector <Transport*> ref) {
-	std::cout << "Зарегистрированные транспортные средства:";
+	std::cout << "Зарегистрированные транспортные средства: ";
 	for (int i = 0; i != ref.size(); i++) {
 		ref[i]->Print_Transport_Name();
 	}
@@ -127,7 +127,7 @@ int Request::Get_Hero() {
 bool Request::Check_Go_Race_Or_Registr() {
 	std::cout << "1. Регистрация транспортного средства." << std::endl;
 	std::cout << "2. Начать гонку." << std::endl;
-	std::cout << "Выбирете действие:";
+	std::cout << "Выбирете действие: ";
 	std::cin >> select_Registr_Or_Race_;
 	while (select_Registr_Or_Race_ < 1 || select_Registr_Or_Race_ > 2) {
 		system("cls");
@@ -136,7 +136,7 @@ bool Request::Check_Go_Race_Or_Registr() {
 		system("cls");
 		std::cout << "1. Регистрация транспортного средства." << std::endl;
 		std::cout << "2. Начать гонку." << std::endl;
-		std::cout << "Выбирете действие:";
+		std::cout << "Выбирете действие: ";
 		std::cin >> select_Registr_Or_Race_;
 	}
 	if (select_Registr_Or_Race_ == 1) {
@@ -154,8 +154,20 @@ void Request::Check_Result_Race(std::vector <Transport*> ref, int dest) {
 void Request::Print_Result_Race(std::vector <Transport*> ref) {
 	std::cout << "Результат гонки: ";
 	std::cout << std::endl;
-	std::cout << std::endl;
 	for (int i = 0; i != ref.size(); i++) {
 		std::cout << i + 1 << "." << " " << ref[i]->Get_Name() << "\t" << "Время: " << ref[i]->Get_Result() << std::endl;
+	}
+	std::cout << std::endl;
+}
+bool Request::Check_Replay_Or_Exit() {
+	std::cout << "1. Провести ещё одну гонку." << std::endl;
+	std::cout << "2. Выйти." << std::endl;
+	std::cout << "Выберите действие: ";
+	std::cin >> select_Action_;
+	if (select_Action_ == 1) {
+		return true;
+	}
+	else {
+		return false;
 	}
 }
