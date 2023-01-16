@@ -15,3 +15,22 @@ std::string Kentavr::Get_Name() {
 int Kentavr::Get_ID() {
 	return id_;
 }
+int Kentavr::Get_Result() {
+	return result_;
+}
+bool Kentavr::operator<(Transport* r_op) {
+	if (this->result_ < r_op->Get_Result()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+bool Kentavr::operator>(Transport* r_op) {
+	if (this->result_ > r_op->Get_Result()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}

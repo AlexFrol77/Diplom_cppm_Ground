@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 	bool flag = true;
 
 	std::string tempStr;
-	int tempInt;
+	int tempInt = 0;
 	int count = 0;
 
 	Request request;
@@ -109,14 +109,16 @@ int main(int argc, char** argv) {
 							request.Print_Select_Hero_Name(&broomstick);
 							vecTempSelectHero.push_back(request.Get_Hero());
 							break;
-						default:
-							std::cout << "В этой гонке нет такого участника" << std::endl;
-							break;
+						if (request.Get_Race() == 2 || request.Get_Race() == 3) {
+							default:
+								std::cout << "В этой гонке нет такого участника" << std::endl;
+								break;
+							}
 						}
 					}
 				}
 				else {
-					request.Print_Replay_Hero_Name(vecHeroRace);   // ??????
+					request.Print_Replay_Hero_Name(vecHeroRace);   
 				}
 				request.Print_Distance();
 				request.Print_Registr_Hero_Name(vecHeroRace);

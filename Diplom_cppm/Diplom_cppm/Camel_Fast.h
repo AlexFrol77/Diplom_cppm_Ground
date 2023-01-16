@@ -11,8 +11,10 @@ public:
 
 	void Print_Transport_Race() override;
 	void Print_Transport_Name() override;
-
 	int Get_ID() override;
+	int Get_Result() override;
+	bool operator<(Transport* r_op) override;
+	bool operator>(Transport* r_op) override;
 private:
 	std::string name_ = " Верблюд - скороход";
 	int speed_ = 1000;

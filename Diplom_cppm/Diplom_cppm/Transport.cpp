@@ -29,3 +29,19 @@ std::string Transport::Get_Name() {
 int Transport::Get_ID() {
 	return id_;
 }
+bool Transport::operator<(Transport* r_op) {
+	if (this->result_ < r_op->Get_Result()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+bool Transport::operator>(Transport* r_op) {
+	if (this->result_ > r_op->Get_Result()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
