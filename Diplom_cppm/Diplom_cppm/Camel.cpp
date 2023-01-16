@@ -16,3 +16,22 @@ std::string Camel::Get_Name() {
 int Camel::Get_ID() {
 	return id_;
 }
+int Camel::Get_Result() {
+	return result_;
+}
+bool Camel::operator<(Transport* r_op) {
+	if (this->result_ < r_op->Get_Result()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+bool Camel::operator>(Transport* r_op) {
+	if (this->result_ > r_op->Get_Result()) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
