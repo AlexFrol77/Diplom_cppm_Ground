@@ -105,6 +105,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Camel;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Transport;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Camel_Fast;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Kentavr;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Plane;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Eagle;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Broomstick;C:\Users\3DPrinter\Desktop\HomeWork_cppm\Diplom_cppm\Diplom_cppm\Boots;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,27 +129,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Broomstick\Broomstick.cpp" />
+    <ClCompile Include="..\Camel\Camel.cpp" />
+    <ClCompile Include="..\Camel_Fast\Camel_Fast.cpp" />
+    <ClCompile Include="..\Eagle\Eagle.cpp" />
+    <ClCompile Include="..\Kentavr\Kentavr.cpp" />
+    <ClCompile Include="..\Plane\Plane.cpp" />
+    <ClCompile Include="..\Transport\Transport.cpp" />
     <ClCompile Include="Boots.cpp" />
-    <ClCompile Include="Broomstick.cpp" />
-    <ClCompile Include="Camel.cpp" />
-    <ClCompile Include="Camel_Fast.cpp" />
     <ClCompile Include="Diplom_cppm.cpp" />
-    <ClCompile Include="Eagle.cpp" />
-    <ClCompile Include="Kentavr.cpp" />
-    <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Request.cpp" />
-    <ClCompile Include="Transport.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Broomstick\Broomstick.h" />
+    <ClInclude Include="..\Camel\Camel.h" />
+    <ClInclude Include="..\Camel_Fast\Camel_Fast.h" />
+    <ClInclude Include="..\Eagle\Eagle.h" />
+    <ClInclude Include="..\Kentavr\Kentavr.h" />
+    <ClInclude Include="..\Plane\Plane.h" />
+    <ClInclude Include="..\Transport\Transport.h" />
     <ClInclude Include="Boots.h" />
-    <ClInclude Include="Broomstick.h" />
-    <ClInclude Include="Camel.h" />
-    <ClInclude Include="Camel_Fast.h" />
-    <ClInclude Include="Eagle.h" />
-    <ClInclude Include="Kentavr.h" />
-    <ClInclude Include="Plane.h" />
     <ClInclude Include="Request.h" />
-    <ClInclude Include="Transport.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

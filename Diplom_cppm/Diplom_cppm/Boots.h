@@ -1,12 +1,11 @@
 #pragma once
-#include"Request.h"
 #include"Transport.h"
 
 
 class Boots : public Transport {
 public:
 	Boots();
-	~Boots();
+	~Boots() override;
 
 	void Print_Transport_Race() override;
 	void Print_Transport_Name() override;
@@ -15,7 +14,7 @@ public:
 	int Get_Result() override;
 	void Go_Race(int dest) override;
 private:
-	std::string name_ = " Ботинки - скороходы ";
+	std::string name_ = " Ботинки - скороходы";
 	int speed_ = 6;
 	int result_ = 0;
 	int id_ = 4;

@@ -28,6 +28,7 @@ do {
 		int count = 0;
 
 		Request request;
+
 		Transport transport;
 		Camel camel;
 		Camel_Fast camel_fast;
@@ -181,6 +182,7 @@ do {
 			} while (flag);
 			system("cls");
 			flag = request.Check_Go_Race_Or_Registr();
+			system("cls");
 		} while (!flag);
 
 		request.Print_Registr_Hero_Name(vecHeroRace);
@@ -201,6 +203,7 @@ do {
 		} while (count != 0);
 
 		system("cls");
+
 		request.Print_Result_Race(vecHeroRace);
 
 		flag = request.Check_Replay_Or_Exit();

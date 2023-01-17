@@ -45,8 +45,6 @@ private:
 
 	bool flag;
 
-	std::vector <int> vecCheckTemp;
-	std::vector <Transport> vecHeroReg;
 	std::vector <std::string> vecHeroAll {
 							  "1. Верблюд ",
 							  "2. Верблюд - быстроход ",
@@ -73,6 +71,5 @@ private:
 							  "0. Закончить регистрацию ",
 							  "Выберите транспорт или 0 для окончания процесса регистрации: " };
 							  
-	std::vector <Transport> arrHeroRace;
 };
 
